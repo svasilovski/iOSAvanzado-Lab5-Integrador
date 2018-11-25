@@ -48,7 +48,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="10n-BF-az8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2692" y="81"/>
+            <point key="canvasLocation" x="2692" y="463"/>
         </scene>
         <!--Perfil-->
         <scene sceneID="BVx-5x-9Y1">
@@ -161,7 +161,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uXi-2Y-GZD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3444" y="81"/>
+            <point key="canvasLocation" x="3444" y="463"/>
         </scene>
         <!--Login-->
         <scene sceneID="tne-QT-ifu">
@@ -178,18 +178,18 @@
                                     <constraint firstAttribute="height" constant="50" id="kBj-bF-4up"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Button">
+                                <state key="normal" title="Registrarse">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="QdI-2Y-xP6" kind="show" id="0SQ-FR-WZ6"/>
+                                    <segue destination="QdI-2Y-xP6" kind="show" id="upH-we-8on"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lgc-qe-2nv">
                                 <rect key="frame" x="16" y="318.5" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cOL-i4-zVP">
                                 <rect key="frame" x="16" y="268" width="343" height="30"/>
@@ -226,7 +226,7 @@
         <!--Sign Up-->
         <scene sceneID="npg-4b-VRb">
             <objects>
-                <viewController id="QdI-2Y-xP6" sceneMemberID="viewController">
+                <viewController id="QdI-2Y-xP6" customClass="RegistroViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="b7j-tc-3l7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -250,6 +250,10 @@
                                 <state key="normal" title="Sign Up">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="signUpTapped:" destination="b7j-tc-3l7" eventType="touchUpInside" id="JdR-yk-dot"/>
+                                    <action selector="signUpTapped:" destination="QdI-2Y-xP6" eventType="touchUpInside" id="Uc9-pS-4ab"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VlX-4U-9UQ">
                                 <rect key="frame" x="16" y="324" width="343" height="30"/>
@@ -261,7 +265,7 @@
                                 <rect key="frame" x="16" y="424" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vqA-Hw-gCB">
                                 <rect key="frame" x="16" y="374" width="343" height="30"/>
@@ -289,10 +293,16 @@
                         <viewLayoutGuide key="safeArea" id="30M-GM-5UE"/>
                     </view>
                     <navigationItem key="navigationItem" title="Sign Up" id="ZYV-tx-pWj"/>
+                    <connections>
+                        <outlet property="emailUITextField" destination="vqA-Hw-gCB" id="sPf-6y-NnZ"/>
+                        <outlet property="passwdUITextField" destination="7bC-Mn-Ndo" id="TaJ-d7-r9I"/>
+                        <outlet property="photoUIImageView" destination="IDS-WZ-ecQ" id="6jc-If-O2P"/>
+                        <outlet property="userUITextField" destination="VlX-4U-9UQ" id="4iZ-1L-N2W"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Dx-vT-7L5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1860" y="793"/>
+            <point key="canvasLocation" x="1860" y="1184"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="4Qu-fR-vxn">
@@ -328,7 +338,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xzG-sG-yds" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1860" y="81"/>
+            <point key="canvasLocation" x="1860" y="463"/>
         </scene>
     </scenes>
 </document>

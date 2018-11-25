@@ -16,6 +16,7 @@
 		7EB29D0621A9BB4200D3AD3A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EB29D0521A9BB4200D3AD3A /* main.m */; };
 		7EB29D1021A9BB4200D3AD3A /* iOSAvanzado_Lab5_IntegradorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EB29D0F21A9BB4200D3AD3A /* iOSAvanzado_Lab5_IntegradorTests.m */; };
 		7EB29D1B21A9BB4200D3AD3A /* iOSAvanzado_Lab5_IntegradorUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EB29D1A21A9BB4200D3AD3A /* iOSAvanzado_Lab5_IntegradorUITests.m */; };
+		7EB29D3021AAE3C300D3AD3A /* RegistroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EB29D2F21AAE3C300D3AD3A /* RegistroViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		7EB29D1621A9BB4200D3AD3A /* iOSAvanzado-Lab5-IntegradorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOSAvanzado-Lab5-IntegradorUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EB29D1A21A9BB4200D3AD3A /* iOSAvanzado_Lab5_IntegradorUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOSAvanzado_Lab5_IntegradorUITests.m; sourceTree = "<group>"; };
 		7EB29D1C21A9BB4200D3AD3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7EB29D2E21AAE3C300D3AD3A /* RegistroViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegistroViewController.h; sourceTree = "<group>"; };
+		7EB29D2F21AAE3C300D3AD3A /* RegistroViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegistroViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +116,8 @@
 				7EB29D0421A9BB4200D3AD3A /* Info.plist */,
 				7EB29D0521A9BB4200D3AD3A /* main.m */,
 				7EB29CFC21A9BB4000D3AD3A /* iOSAvanzado_Lab5_Integrador.xcdatamodeld */,
+				7EB29D2E21AAE3C300D3AD3A /* RegistroViewController.h */,
+				7EB29D2F21AAE3C300D3AD3A /* RegistroViewController.m */,
 			);
 			path = "iOSAvanzado-Lab5-Integrador";
 			sourceTree = "<group>";
@@ -267,6 +272,7 @@
 			files = (
 				7EB29CF821A9BB4000D3AD3A /* ViewController.m in Sources */,
 				7EB29CF521A9BB3F00D3AD3A /* AppDelegate.m in Sources */,
+				7EB29D3021AAE3C300D3AD3A /* RegistroViewController.m in Sources */,
 				7EB29D0621A9BB4200D3AD3A /* main.m in Sources */,
 				7EB29CFE21A9BB4000D3AD3A /* iOSAvanzado_Lab5_Integrador.xcdatamodeld in Sources */,
 			);
