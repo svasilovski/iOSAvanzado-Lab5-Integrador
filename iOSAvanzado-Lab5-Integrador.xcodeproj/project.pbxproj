@@ -17,6 +17,8 @@
 		7EB29D1021A9BB4200D3AD3A /* iOSAvanzado_Lab5_IntegradorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EB29D0F21A9BB4200D3AD3A /* iOSAvanzado_Lab5_IntegradorTests.m */; };
 		7EB29D1B21A9BB4200D3AD3A /* iOSAvanzado_Lab5_IntegradorUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EB29D1A21A9BB4200D3AD3A /* iOSAvanzado_Lab5_IntegradorUITests.m */; };
 		7EB29D3021AAE3C300D3AD3A /* RegistroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EB29D2F21AAE3C300D3AD3A /* RegistroViewController.m */; };
+		7EE11E7721B2C182002192E9 /* Registro.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7EE11E7621B2C182002192E9 /* Registro.plist */; };
+		7EE11E7A21B2C2C1002192E9 /* RegistroPlist.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EE11E7921B2C2C1002192E9 /* RegistroPlist.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,9 @@
 		7EB29D1C21A9BB4200D3AD3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7EB29D2E21AAE3C300D3AD3A /* RegistroViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegistroViewController.h; sourceTree = "<group>"; };
 		7EB29D2F21AAE3C300D3AD3A /* RegistroViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegistroViewController.m; sourceTree = "<group>"; };
+		7EE11E7621B2C182002192E9 /* Registro.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Registro.plist; sourceTree = "<group>"; };
+		7EE11E7821B2C2A6002192E9 /* RegistroPlist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegistroPlist.h; sourceTree = "<group>"; };
+		7EE11E7921B2C2C1002192E9 /* RegistroPlist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegistroPlist.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +123,7 @@
 				7EB29CFC21A9BB4000D3AD3A /* iOSAvanzado_Lab5_Integrador.xcdatamodeld */,
 				7EB29D2E21AAE3C300D3AD3A /* RegistroViewController.h */,
 				7EB29D2F21AAE3C300D3AD3A /* RegistroViewController.m */,
+				7EE11E7B21B2C2CD002192E9 /* RegistroData */,
 			);
 			path = "iOSAvanzado-Lab5-Integrador";
 			sourceTree = "<group>";
@@ -138,6 +144,16 @@
 				7EB29D1C21A9BB4200D3AD3A /* Info.plist */,
 			);
 			path = "iOSAvanzado-Lab5-IntegradorUITests";
+			sourceTree = "<group>";
+		};
+		7EE11E7B21B2C2CD002192E9 /* RegistroData */ = {
+			isa = PBXGroup;
+			children = (
+				7EE11E7621B2C182002192E9 /* Registro.plist */,
+				7EE11E7821B2C2A6002192E9 /* RegistroPlist.h */,
+				7EE11E7921B2C2C1002192E9 /* RegistroPlist.m */,
+			);
+			path = RegistroData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,6 +262,7 @@
 				7EB29D0321A9BB4200D3AD3A /* LaunchScreen.storyboard in Resources */,
 				7EB29D0021A9BB4200D3AD3A /* Assets.xcassets in Resources */,
 				7EB29CFB21A9BB4000D3AD3A /* Main.storyboard in Resources */,
+				7EE11E7721B2C182002192E9 /* Registro.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +292,7 @@
 				7EB29D3021AAE3C300D3AD3A /* RegistroViewController.m in Sources */,
 				7EB29D0621A9BB4200D3AD3A /* main.m in Sources */,
 				7EB29CFE21A9BB4000D3AD3A /* iOSAvanzado_Lab5_Integrador.xcdatamodeld in Sources */,
+				7EE11E7A21B2C2C1002192E9 /* RegistroPlist.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
