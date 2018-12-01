@@ -11,5 +11,7 @@
 @interface RegistroPlist : NSObject
 -(void)setFilePath:(NSString *)file;
 -(void)writePlist:(NSString *)key :(NSString *) value;
+-(void)writePlistDictionary:(NSDictionary *)data;
+-(void)updatePlistDictionary:(NSDictionary *)data;
 -(NSDictionary *)readPlist;
 @end

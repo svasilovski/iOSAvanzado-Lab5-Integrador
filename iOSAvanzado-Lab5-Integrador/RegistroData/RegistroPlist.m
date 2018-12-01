@@ -26,6 +26,34 @@
     [plistDict writeToFile:self.filePath atomically:YES];
 }
 
+-(void)writePlistDictionary:(NSDictionary *)data{
+    NSMutableDictionary *plistDict = [[NSMutableDictionary alloc]initWithContentsOfFile:self.filePath];
+    
+    for(NSString *keyData in data){
+        [plistDict setObject:data[keyData] forKey:keyData];
+    }
+         
+    [plistDict writeToFile:self.filePath atomically:YES];
+}
+
+-(void)updatePlistDictionary:(NSDictionary *)data{
+    NSMutableDictionary *plistDict = [[NSMutableDictionary alloc]initWithContentsOfFile:self.filePath];
+    
+    /*for(NSString *k in plistDict){
+        NSLog(@"%@", plistDict[k]);
+    }*/
+    
+    for(NSString *keyData in data){
+        plistDict[keyData] = data[keyData];
+    }
+    
+    /*for(NSString *k in plistDict){
+        NSLog(@"%@", plistDict[k]);
+    }*/
+    
+    [plistDict writeToFile:self.filePath atomically:NO];
+}
+
 -(NSDictionary *)readPlist{
     NSDictionary *plistDict = [[NSDictionary alloc]initWithContentsOfFile:self.filePath];
     return plistDict;

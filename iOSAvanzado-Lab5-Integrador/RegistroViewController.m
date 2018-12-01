@@ -46,8 +46,16 @@ static NSString *const keyImg = @"image";
 }
 
 - (IBAction)signUpTapped:(id)sender {
-    [self.plistRegistro writePlist:keyUser :self.userUITextField.text];
-    [self.plistRegistro writePlist:keyPass :self.passwdUITextField.text];
+    NSMutableDictionary *data = [[NSMutableDictionary alloc] initWithCapacity:4];
+    [data setObject:self.userUITextField.text forKey:keyUser];
+    [data setObject:self.passwdUITextField.text forKey:keyPass];
+    [data setObject:self.emailUITextField.text forKey:keyMail];
+    [data setObject:@"" forKey:keyImg];
+    
+    [self.plistRegistro updatePlistDictionary:data];
+    
+    //[self.plistRegistro writePlist:keyUser :self.userUITextField.text];
+    //[self.plistRegistro writePlist:keyPass :self.passwdUITextField.text];
     //[self.plistRegistro writePlist:keyMail :self.emailUITextField.text];
     //[self.plistRegistro writePlist:keyImg :self.photoUIImageView.text];
 }

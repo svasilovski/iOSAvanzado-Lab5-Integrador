@@ -7,17 +7,26 @@
 //
 
 #import "ViewController.h"
+#import "RegistroData/RegistroPlist.h"
 
 @interface ViewController ()
-
+@property(nonatomic) RegistroPlist *plistRegistro;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    self.plistRegistro=[RegistroPlist new];
+    [self.plistRegistro setFilePath:@"Registro"];
+    self.verificarDatos;
 }
 
+- (void)verificarDatos{
+    NSDictionary *datos = [self.plistRegistro readPlist];
+    for(NSString *k in datos){
+        NSLog(@"%@", datos[k]);
+    }
+}
 
 @end
