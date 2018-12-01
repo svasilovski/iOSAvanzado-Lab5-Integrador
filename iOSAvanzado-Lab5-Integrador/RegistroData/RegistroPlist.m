@@ -9,13 +9,13 @@
 #import "RegistroPlist.h"
 
 @interface RegistroPlist()
-@property(nonatomic)NSString *filePath;
+@property (nonatomic, strong) NSString *filePath;
 @end
 
 @implementation RegistroPlist
 
 -(void)setFilePath:(NSString *)file{
-    self.filePath = [[NSBundle mainBundle] pathForResource:file ofType:@"plist"];
+    _filePath = [[NSBundle mainBundle] pathForResource:file ofType:@"plist"];
 }
 
 -(void)writePlist:(NSString *)key :(NSString *) value{

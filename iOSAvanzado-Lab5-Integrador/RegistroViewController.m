@@ -48,7 +48,7 @@ static NSString *const keyImg = @"image";
 - (IBAction)signUpTapped:(id)sender {
     [self.plistRegistro writePlist:keyUser :self.userUITextField.text];
     [self.plistRegistro writePlist:keyPass :self.passwdUITextField.text];
-    [self.plistRegistro writePlist:keyMail :self.emailUITextField.text];
+    //[self.plistRegistro writePlist:keyMail :self.emailUITextField.text];
     //[self.plistRegistro writePlist:keyImg :self.photoUIImageView.text];
 }
 
