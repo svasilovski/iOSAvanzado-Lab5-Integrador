@@ -9,8 +9,15 @@
 #import "ViewController.h"
 #import "RegistroData/RegistroPlist.h"
 
+static NSString *const keyUser = @"user";
+static NSString *const keyPass = @"passwd";
+
 @interface ViewController ()
 @property(nonatomic) RegistroPlist *plistRegistro;
+@property (weak, nonatomic) IBOutlet UITextField *userUITextField;
+@property (weak, nonatomic) IBOutlet UITextField *passwdUITextFielf;
+
+@property (nonatomic)BOOL habilitado;
 @end
 
 @implementation ViewController
@@ -24,8 +31,30 @@
 
 - (void)verificarDatos{
     NSDictionary *datos = [self.plistRegistro readPlist];
-    for(NSString *k in datos){
-        NSLog(@"%@", datos[k]);
+    NSLog(@"%@", datos[keyUser]);
+    NSLog(@"%@", datos[keyPass]);
+    if(![datos[keyPass] isEqual:@""] && ![datos[keyUser] isEqual:@""]){
+        NSLog(@"Redirigir a Registrarse.");
+    }
+}
+
+- (IBAction)passwdEditing:(id)sender {
+    self.verificarDatos;
+    if([self.passwdUITextFielf.text isEqual:@""]){
+        return;
+    }else if(_habilitado  && ![self.userUITextField.text isEqual:@""]){
+        self.validarDatos;
+    }
+}
+
+- (void)validarDatos{
+    NSDictionary *datos = [self.plistRegistro readPlist];
+    
+    if(
+       [datos[keyUser] isEqual:self.userUITextField.text] &&
+       [datos[keyPass] isEqual:self.passwdUITextFielf.text]
+    ){
+        NSLog(@"Redirigir a Lista de materiales.");
     }
 }
 

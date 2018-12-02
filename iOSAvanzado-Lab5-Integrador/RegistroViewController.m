@@ -32,7 +32,7 @@ static NSString *const keyImg = @"image";
     [self.plistRegistro setFilePath:@"Registro"];
     self.gestureImage;
 }
-
+#pragma mark - Acciones de imagenes
 -(void) gestureImage{
     self.photoUIImageView.userInteractionEnabled=YES;
     UITapGestureRecognizer *tapGestureAction = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapGesture:)];
@@ -44,7 +44,7 @@ static NSString *const keyImg = @"image";
     // Accion para agregar la imagen
     NSLog(@"%@", sender);
 }
-
+#pragma mark - guardar datos
 - (IBAction)signUpTapped:(id)sender {
     NSMutableDictionary *data = [[NSMutableDictionary alloc] initWithCapacity:4];
     [data setObject:self.userUITextField.text forKey:keyUser];
@@ -54,20 +54,13 @@ static NSString *const keyImg = @"image";
     
     [self.plistRegistro updatePlistDictionary:data];
     
-    //[self.plistRegistro writePlist:keyUser :self.userUITextField.text];
-    //[self.plistRegistro writePlist:keyPass :self.passwdUITextField.text];
-    //[self.plistRegistro writePlist:keyMail :self.emailUITextField.text];
-    //[self.plistRegistro writePlist:keyImg :self.photoUIImageView.text];
+    [self.userUITextField setText:@""];
+    [self.passwdUITextField setText:@""];
+    [self.emailUITextField setText:@""];
+    [self.photoUIImageView setImage:nil];
+    
+    NSLog(@"Redirigir a Login.");
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

@@ -39,17 +39,9 @@
 -(void)updatePlistDictionary:(NSDictionary *)data{
     NSMutableDictionary *plistDict = [[NSMutableDictionary alloc]initWithContentsOfFile:self.filePath];
     
-    /*for(NSString *k in plistDict){
-        NSLog(@"%@", plistDict[k]);
-    }*/
-    
     for(NSString *keyData in data){
         plistDict[keyData] = data[keyData];
     }
-    
-    /*for(NSString *k in plistDict){
-        NSLog(@"%@", plistDict[k]);
-    }*/
     
     [plistDict writeToFile:self.filePath atomically:NO];
 }
