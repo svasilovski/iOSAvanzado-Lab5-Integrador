@@ -34,16 +34,16 @@ static NSString *const keyPass = @"passwd";
     NSDictionary *datos = [self.plistRegistro readPlist];
     NSLog(@"%@", datos[keyUser]);
     NSLog(@"%@", datos[keyPass]);
-    if(![datos[keyPass] isEqual:@""] && ![datos[keyUser] isEqual:@""]){
+    if([datos[keyPass] isEqual:@""] && [datos[keyUser] isEqual:@""]){
+        [self performSegueWithIdentifier:@"goToLogin" sender:self];
+    }
+    else{
         [self performSegueWithIdentifier:@"goToList" sender:self];
     }
 }
 
-- (IBAction)passwdEditing:(id)sender {
-    self.verificarDatos;
-    if([self.passwdUITextFielf.text isEqual:@""]){
-        return;
-    }else if(_habilitado  && ![self.userUITextField.text isEqual:@""]){
+- (IBAction)loginTapped:(id)sender {
+    if(![self.passwdUITextFielf.text isEqual:@""] && ![self.userUITextField.text isEqual:@""]){
         self.validarDatos;
     }
 }

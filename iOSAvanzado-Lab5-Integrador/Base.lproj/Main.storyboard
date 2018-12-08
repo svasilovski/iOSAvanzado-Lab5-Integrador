@@ -19,18 +19,42 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="13h-qf-jFQ">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="13h-qf-jFQ" customClass="CeldaTableViewCell">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="13h-qf-jFQ" id="i7p-sa-2UO">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zt4-lz-RlP">
+                                            <rect key="frame" x="16" y="11" width="283" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gh1-MX-Fnh">
+                                            <rect key="frame" x="309" y="11" width="50" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="50" id="mks-2A-ukg"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Zt4-lz-RlP" firstAttribute="leading" secondItem="i7p-sa-2UO" secondAttribute="leading" constant="16" id="1TR-83-HS2"/>
+                                        <constraint firstItem="Gh1-MX-Fnh" firstAttribute="leading" secondItem="Zt4-lz-RlP" secondAttribute="trailing" constant="10" id="SpC-VP-BV7"/>
+                                        <constraint firstItem="Gh1-MX-Fnh" firstAttribute="top" secondItem="i7p-sa-2UO" secondAttribute="top" constant="11" id="X9l-Nr-08i"/>
+                                        <constraint firstAttribute="trailing" secondItem="Gh1-MX-Fnh" secondAttribute="trailing" constant="16" id="psd-bR-sKa"/>
+                                        <constraint firstItem="Zt4-lz-RlP" firstAttribute="top" secondItem="i7p-sa-2UO" secondAttribute="top" constant="11" id="qJe-90-R4J"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="K5f-FE-mvi" id="xHf-D0-sEC"/>
-                            <outlet property="delegate" destination="K5f-FE-mvi" id="bpa-Od-FYM"/>
+                            <outlet property="dataSource" destination="K5f-FE-mvi" id="Lue-2u-ZIE"/>
+                            <outlet property="delegate" destination="K5f-FE-mvi" id="dkM-HJ-jOs"/>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Integrador" id="xFZ-BX-uLn">
@@ -182,7 +206,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="QdI-2Y-xP6" kind="show" id="upH-we-8on"/>
+                                    <segue destination="QdI-2Y-xP6" kind="show" identifier="goToLogin" id="upH-we-8on"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lgc-qe-2nv">
@@ -190,9 +214,6 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                                <connections>
-                                    <action selector="passwdEditing:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="Fi4-UF-gJP"/>
-                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cOL-i4-zVP">
                                 <rect key="frame" x="16" y="268" width="343" height="30"/>
@@ -200,6 +221,16 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="plR-L7-iyl">
+                                <rect key="frame" x="16" y="373.5" width="343" height="30"/>
+                                <color key="backgroundColor" red="0.062519948780000001" green="0.1248531653" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nIn-q2-NFE"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -208,12 +239,15 @@
                             <constraint firstItem="cOL-i4-zVP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6DU-S5-H61"/>
                             <constraint firstItem="cOL-i4-zVP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="7lh-7K-FLI"/>
                             <constraint firstItem="Lgc-qe-2nv" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="KFy-FV-0hh"/>
+                            <constraint firstItem="plR-L7-iyl" firstAttribute="leading" secondItem="Lgc-qe-2nv" secondAttribute="leading" id="KPa-hA-hdn"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mqq-Pk-dGH" secondAttribute="trailing" id="U94-GH-IOK"/>
                             <constraint firstItem="Lgc-qe-2nv" firstAttribute="top" secondItem="cOL-i4-zVP" secondAttribute="bottom" constant="15" id="X6v-Hu-HfZ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mqq-Pk-dGH" secondAttribute="bottom" id="hXE-fH-nyZ"/>
+                            <constraint firstItem="plR-L7-iyl" firstAttribute="top" secondItem="Lgc-qe-2nv" secondAttribute="bottom" constant="25" id="iQG-7o-PuP"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cOL-i4-zVP" secondAttribute="trailing" constant="16" id="j0k-Vk-bsh"/>
                             <constraint firstItem="Lgc-qe-2nv" firstAttribute="trailing" secondItem="cOL-i4-zVP" secondAttribute="trailing" id="l3m-ay-RMs"/>
                             <constraint firstItem="Lgc-qe-2nv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wJA-NN-zdr"/>
+                            <constraint firstItem="plR-L7-iyl" firstAttribute="trailing" secondItem="Lgc-qe-2nv" secondAttribute="trailing" id="wuk-Wd-3ev"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
