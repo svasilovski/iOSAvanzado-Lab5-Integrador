@@ -13,7 +13,7 @@
         <!--Integrador-->
         <scene sceneID="kV4-mx-ji1">
             <objects>
-                <tableViewController id="K5f-FE-mvi" sceneMemberID="viewController">
+                <tableViewController id="K5f-FE-mvi" customClass="DetalleTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="cpg-OZ-EAb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

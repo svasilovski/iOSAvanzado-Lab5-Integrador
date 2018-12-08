@@ -59,7 +59,8 @@ static NSString *const keyImg = @"image";
     [self.emailUITextField setText:@""];
     [self.photoUIImageView setImage:nil];
     
-    NSLog(@"Redirigir a Login.");
+    // redirijo al login
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 

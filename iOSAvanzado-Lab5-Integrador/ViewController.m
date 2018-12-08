@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "RegistroData/RegistroPlist.h"
+#import "DetalleTableViewController.h"
 
 static NSString *const keyUser = @"user";
 static NSString *const keyPass = @"passwd";
@@ -34,7 +35,7 @@ static NSString *const keyPass = @"passwd";
     NSLog(@"%@", datos[keyUser]);
     NSLog(@"%@", datos[keyPass]);
     if(![datos[keyPass] isEqual:@""] && ![datos[keyUser] isEqual:@""]){
-        NSLog(@"Redirigir a Registrarse.");
+        [self performSegueWithIdentifier:@"goToList" sender:self];
     }
 }
 
@@ -54,7 +55,14 @@ static NSString *const keyPass = @"passwd";
        [datos[keyUser] isEqual:self.userUITextField.text] &&
        [datos[keyPass] isEqual:self.passwdUITextFielf.text]
     ){
-        NSLog(@"Redirigir a Lista de materiales.");
+        //NSLog(@"Redirigir a Lista de materiales.");
+        [self performSegueWithIdentifier:@"goToList" sender:self];
+    }
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([segue.identifier isEqualToString:@"goToList"]) {
+        DetalleTableViewController *dtvc = (DetalleTableViewController *)segue.destinationViewController;
     }
 }
 
