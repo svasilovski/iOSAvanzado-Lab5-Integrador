@@ -7,7 +7,7 @@
 //
 
 #import "DetalleTableViewController.h"
-#import "CeldaTableViewCell.h"
+#import "../CeldaTableViewCell.h"
 #import "JsonController.h"
 
 @interface DetalleTableViewController ()
