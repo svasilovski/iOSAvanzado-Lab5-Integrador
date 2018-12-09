@@ -11,6 +11,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CeldaTableViewCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UILabel *descripcionUILabel;
+@property (weak, nonatomic) IBOutlet UILabel *cantidadUILabel;
 
 @end
 

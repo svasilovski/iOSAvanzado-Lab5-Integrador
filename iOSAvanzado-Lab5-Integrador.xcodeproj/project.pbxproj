@@ -9,7 +9,8 @@
 /* Begin PBXBuildFile section */
 		7E2BF22221BC618000342464 /* DetalleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E2BF22121BC618000342464 /* DetalleTableViewController.m */; };
 		7E2BF22421BC802200342464 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 7E2BF22321BC802200342464 /* data.json */; };
-		7E2BF22821BC852300342464 /* CeldaTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E2BF22721BC852300342464 /* CeldaTableViewCell.m */; };
+		7E2BF22B21BD27A900342464 /* CeldaTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E2BF22A21BD27A900342464 /* CeldaTableViewCell.m */; };
+		7E2BF23421BD2F9700342464 /* JsonController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E2BF23321BD2F9700342464 /* JsonController.m */; };
 		7EB29CF521A9BB3F00D3AD3A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EB29CF421A9BB3F00D3AD3A /* AppDelegate.m */; };
 		7EB29CF821A9BB4000D3AD3A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EB29CF721A9BB4000D3AD3A /* ViewController.m */; };
 		7EB29CFB21A9BB4000D3AD3A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EB29CF921A9BB4000D3AD3A /* Main.storyboard */; };
@@ -45,8 +46,10 @@
 		7E2BF22021BC618000342464 /* DetalleTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetalleTableViewController.h; sourceTree = "<group>"; };
 		7E2BF22121BC618000342464 /* DetalleTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetalleTableViewController.m; sourceTree = "<group>"; };
 		7E2BF22321BC802200342464 /* data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
-		7E2BF22621BC852300342464 /* CeldaTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CeldaTableViewCell.h; sourceTree = "<group>"; };
-		7E2BF22721BC852300342464 /* CeldaTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CeldaTableViewCell.m; sourceTree = "<group>"; };
+		7E2BF22921BD27A900342464 /* CeldaTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CeldaTableViewCell.h; path = ../CeldaTableViewCell.h; sourceTree = "<group>"; };
+		7E2BF22A21BD27A900342464 /* CeldaTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CeldaTableViewCell.m; path = ../CeldaTableViewCell.m; sourceTree = "<group>"; };
+		7E2BF23221BD2F9700342464 /* JsonController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JsonController.h; sourceTree = "<group>"; };
+		7E2BF23321BD2F9700342464 /* JsonController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JsonController.m; sourceTree = "<group>"; };
 		7EB29CF021A9BB3F00D3AD3A /* iOSAvanzado-Lab5-Integrador.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOSAvanzado-Lab5-Integrador.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EB29CF321A9BB3F00D3AD3A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7EB29CF421A9BB3F00D3AD3A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -99,13 +102,22 @@
 		7E2BF22521BC804C00342464 /* Lista */ = {
 			isa = PBXGroup;
 			children = (
-				7E2BF22621BC852300342464 /* CeldaTableViewCell.h */,
-				7E2BF22721BC852300342464 /* CeldaTableViewCell.m */,
+				7E2BF22921BD27A900342464 /* CeldaTableViewCell.h */,
+				7E2BF22A21BD27A900342464 /* CeldaTableViewCell.m */,
 				7E2BF22021BC618000342464 /* DetalleTableViewController.h */,
 				7E2BF22121BC618000342464 /* DetalleTableViewController.m */,
-				7E2BF22321BC802200342464 /* data.json */,
 			);
 			path = Lista;
+			sourceTree = "<group>";
+		};
+		7E2BF23521BD2FA000342464 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				7E2BF23221BD2F9700342464 /* JsonController.h */,
+				7E2BF23321BD2F9700342464 /* JsonController.m */,
+				7E2BF22321BC802200342464 /* data.json */,
+			);
+			path = JSON;
 			sourceTree = "<group>";
 		};
 		7EB29CE721A9BB3F00D3AD3A = {
@@ -145,6 +157,7 @@
 				7EB29D2F21AAE3C300D3AD3A /* RegistroViewController.m */,
 				7EE11E7B21B2C2CD002192E9 /* RegistroData */,
 				7E2BF22521BC804C00342464 /* Lista */,
+				7E2BF23521BD2FA000342464 /* JSON */,
 			);
 			path = "iOSAvanzado-Lab5-Integrador";
 			sourceTree = "<group>";
@@ -312,9 +325,10 @@
 				7EB29CF821A9BB4000D3AD3A /* ViewController.m in Sources */,
 				7EB29CF521A9BB3F00D3AD3A /* AppDelegate.m in Sources */,
 				7E2BF22221BC618000342464 /* DetalleTableViewController.m in Sources */,
-				7E2BF22821BC852300342464 /* CeldaTableViewCell.m in Sources */,
+				7E2BF22B21BD27A900342464 /* CeldaTableViewCell.m in Sources */,
 				7EB29D3021AAE3C300D3AD3A /* RegistroViewController.m in Sources */,
 				7EB29D0621A9BB4200D3AD3A /* main.m in Sources */,
+				7E2BF23421BD2F9700342464 /* JsonController.m in Sources */,
 				7EB29CFE21A9BB4000D3AD3A /* iOSAvanzado_Lab5_Integrador.xcdatamodeld in Sources */,
 				7EE11E7A21B2C2C1002192E9 /* RegistroPlist.m in Sources */,
 			);
