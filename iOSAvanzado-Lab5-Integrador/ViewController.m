@@ -12,6 +12,7 @@
 
 static NSString *const keyUser = @"user";
 static NSString *const keyPass = @"passwd";
+static NSString *const logedPass = @"userLogged";
 
 @interface ViewController ()
 @property(nonatomic) RegistroPlist *plistRegistro;
@@ -37,7 +38,7 @@ static NSString *const keyPass = @"passwd";
     if([datos[keyPass] isEqual:@""] && [datos[keyUser] isEqual:@""]){
         [self performSegueWithIdentifier:@"goToLogin" sender:self];
     }
-    else{
+    else if([datos[logedPass] isEqual:@"YES"]){
         [self performSegueWithIdentifier:@"goToList" sender:self];
     }
 }
@@ -55,7 +56,7 @@ static NSString *const keyPass = @"passwd";
        [datos[keyUser] isEqual:self.userUITextField.text] &&
        [datos[keyPass] isEqual:self.passwdUITextFielf.text]
     ){
-        //NSLog(@"Redirigir a Lista de materiales.");
+        [self.plistRegistro writePlist:logedPass :@"YES"];
         [self performSegueWithIdentifier:@"goToList" sender:self];
     }
 }
