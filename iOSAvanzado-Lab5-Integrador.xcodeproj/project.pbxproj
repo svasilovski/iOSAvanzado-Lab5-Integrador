@@ -23,6 +23,7 @@
 		7EB29D3021AAE3C300D3AD3A /* RegistroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EB29D2F21AAE3C300D3AD3A /* RegistroViewController.m */; };
 		7EE11E7721B2C182002192E9 /* Registro.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7EE11E7621B2C182002192E9 /* Registro.plist */; };
 		7EE11E7A21B2C2C1002192E9 /* RegistroPlist.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EE11E7921B2C2C1002192E9 /* RegistroPlist.m */; };
+		7EEEE88D21C5234200033D55 /* PerfilViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EEEE88C21C5234200033D55 /* PerfilViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,8 @@
 		7EE11E7621B2C182002192E9 /* Registro.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Registro.plist; sourceTree = "<group>"; };
 		7EE11E7821B2C2A6002192E9 /* RegistroPlist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegistroPlist.h; sourceTree = "<group>"; };
 		7EE11E7921B2C2C1002192E9 /* RegistroPlist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegistroPlist.m; sourceTree = "<group>"; };
+		7EEEE88B21C5234200033D55 /* PerfilViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PerfilViewController.h; sourceTree = "<group>"; };
+		7EEEE88C21C5234200033D55 /* PerfilViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PerfilViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +161,8 @@
 				7EE11E7B21B2C2CD002192E9 /* RegistroData */,
 				7E2BF22521BC804C00342464 /* Lista */,
 				7E2BF23521BD2FA000342464 /* JSON */,
+				7EEEE88B21C5234200033D55 /* PerfilViewController.h */,
+				7EEEE88C21C5234200033D55 /* PerfilViewController.m */,
 			);
 			path = "iOSAvanzado-Lab5-Integrador";
 			sourceTree = "<group>";
@@ -328,6 +333,7 @@
 				7E2BF22B21BD27A900342464 /* CeldaTableViewCell.m in Sources */,
 				7EB29D3021AAE3C300D3AD3A /* RegistroViewController.m in Sources */,
 				7EB29D0621A9BB4200D3AD3A /* main.m in Sources */,
+				7EEEE88D21C5234200033D55 /* PerfilViewController.m in Sources */,
 				7E2BF23421BD2F9700342464 /* JsonController.m in Sources */,
 				7EB29CFE21A9BB4000D3AD3A /* iOSAvanzado_Lab5_Integrador.xcdatamodeld in Sources */,
 				7EE11E7A21B2C2C1002192E9 /* RegistroPlist.m in Sources */,
